@@ -1,0 +1,288 @@
+Internal Server Error: /photo/arroz_con_pollo_4_1*5258/
+
+DoesNotExist at /photo/arroz_con_pollo_4_1*5258/
+Picture matching query does not exist.
+
+Request Method: GET
+Request URL: http://url7152.worldfood.guide/ls/click?upn=-2BwMYNzVb1qaevM0hP3HehTw6PoR84x-2FHR442q6lZYAEN4b26zVPs-2FqNK-2BSOFRSDMgcvylVucuiD7JQLMR-2FYJvBeChRC6jVbk-2BWfCXw-2FCBVU-3DTIdk_62Gbf4HiGw3ADYiMJvHFW1Ms1eFhf-2BPAKF3vox91H7a71VOK6RQiHJ8gdQejYM-2B8cuDv9eVkzJZ7j8l5nLUXDK3SlwwtuzfEsDKWc1MtLx7JaQTra-2FHiBF-2B-2FAPQgplBMO9kOrbCgaSzkiZsiaJ0fybBXCx9xsHrPCSbMgbhJYXicQeITim7HWM99DzGenSTPxHHvJUTJUj5W32CTiRMq4w-3D-3D
+Django Version: 2.2.11
+Python Executable: /app/.heroku/python/bin/python
+Python Version: 3.8.1
+Python Path: ['/app/.heroku/python/bin', '/app', '/app/.heroku/python/lib/python38.zip', '/app/.heroku/python/lib/python3.8', '/app/.heroku/python/lib/python3.8/lib-dynload', '/app/.heroku/python/lib/python3.8/site-packages']
+Server time: Thu, 8 Jul 2021 23:07:46 -0500
+Installed Applications:
+['django.contrib.sites',
+ 'allauth',
+ 'allauth.account',
+ 'allauth.socialaccount',
+ 'allauth.socialaccount.providers.facebook',
+ 'django.contrib.admin',
+ 'django.contrib.auth',
+ 'django.contrib.contenttypes',
+ 'django.contrib.sessions',
+ 'django.contrib.messages',
+ 'django.contrib.staticfiles',
+ 'django.contrib.postgres',
+ 'django.contrib.humanize',
+ 'dish.files',
+ 'crispy_forms',
+ 'django_user_agents',
+ 'django.contrib.sitemaps',
+ 'inflection',
+ 'rest_framework',
+ 'storages']
+Installed Middleware:
+['django.middleware.security.SecurityMiddleware',
+ 'django.contrib.sessions.middleware.SessionMiddleware',
+ 'django.middleware.common.BrokenLinkEmailsMiddleware',
+ 'django.middleware.common.CommonMiddleware',
+ 'django.middleware.csrf.CsrfViewMiddleware',
+ 'django.contrib.auth.middleware.AuthenticationMiddleware',
+ 'django.contrib.messages.middleware.MessageMiddleware',
+ 'django.middleware.clickjacking.XFrameOptionsMiddleware',
+ 'django_user_agents.middleware.UserAgentMiddleware']
+
+
+Traceback:
+
+File "/app/.heroku/python/lib/python3.8/site-packages/django/core/handlers/exception.py" in inner
+  34.             response = get_response(request)
+
+File "/app/.heroku/python/lib/python3.8/site-packages/django/core/handlers/base.py" in _get_response
+  115.                 response = self.process_exception_by_middleware(e, request)
+
+File "/app/.heroku/python/lib/python3.8/site-packages/django/core/handlers/base.py" in _get_response
+  113.                 response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+File "/app/dish/files/views.py" in photourl_view
+  2089.         pho = Picture.objects.select_related('dish','owner__user').prefetch_related('dish__cuisines').get(urlname=urlname)
+
+File "/app/.heroku/python/lib/python3.8/site-packages/django/db/models/query.py" in get
+  406.             raise self.model.DoesNotExist(
+
+Exception Type: DoesNotExist at /photo/arroz_con_pollo_4_1*5258/
+Exception Value: Picture matching query does not exist.
+Request information:
+USER: AnonymousUser
+
+GET: No GET data
+
+POST: No POST data
+
+FILES: No FILES data
+
+COOKIES:
+csrftoken = '2HPIewrqOAq58TXKf4nMziNwmns1JOF6vxodkrorIzN6LflNUq78eG0T0CctPqFv'
+fpestid = 'ul24BO8W9MoLHWaG7B5mnzvDtGfrXgy_tFQ_P-Xce3VGOnNYEyQVSvwBEsZxMmG6_6YGTQ'
+
+META:
+CSRF_COOKIE = '2HPIewrqOAq58TXKf4nMziNwmns1JOF6vxodkrorIzN6LflNUq78eG0T0CctPqFv'
+HTTP_ACCEPT = 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+HTTP_ACCEPT_ENCODING = 'gzip,deflate'
+HTTP_CONNECTION = 'close'
+HTTP_CONNECT_TIME = '1'
+HTTP_COOKIE = 'csrftoken=2HPIewrqOAq58TXKf4nMziNwmns1JOF6vxodkrorIzN6LflNUq78eG0T0CctPqFv; fpestid=ul24BO8W9MoLHWaG7B5mnzvDtGfrXgy_tFQ_P-Xce3VGOnNYEyQVSvwBEsZxMmG6_6YGTQ'
+HTTP_HOST = 'worldfood.guide'
+HTTP_REFERER = 'http://url7152.worldfood.guide/ls/click?upn=-2BwMYNzVb1qaevM0hP3HehTw6PoR84x-2FHR442q6lZYAEzdxqVmkKO1qvaxAl6U8NlZ0Jk_62Gbf4HiGw3ADYiMJvHFW1Ms1eFhf-2BPAKF3vox91H7a71VOK6RQiHJ8gdQejYM-2B8ECRKtl5RyNp-2Fs0WENAU8lLhwx4gm-2F9-2Ba-2FE6vuOqaMReyy7RTFlneIpRCn4d-2B04Q9CA4EhT2ckDhRBvzjpAP2DO5hUDraaidD0R1kg72tockkYfn6VaL0De89jvAuWiAvO1edpzZTOS1bYw4D2xniUg-3D-3D
+HTTP_TOTAL_ROUTE_TIME = '0'
+HTTP_USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4298.0 Safari/537.36'
+HTTP_VIA = '1.1 vegur'
+HTTP_X_FORWARDED_FOR = '45.88.3.145'
+HTTP_X_FORWARDED_PORT = '443'
+HTTP_X_FORWARDED_PROTO = 'https'
+HTTP_X_REQUESTED_WITH = 'XMLHttpRequest'
+HTTP_X_REQUEST_ID = '1cf7f400-717a-410b-82ad-894286e6be01'
+HTTP_X_REQUEST_START = '1625803661644'
+PATH_INFO = '/photo/arroz_con_pollo_4_1*5258/'
+QUERY_STRING = ''
+RAW_URI = '/photo/arroz_con_pollo_4_1*5258/'
+REMOTE_ADDR = '10.52.12.58'
+REMOTE_PORT = '29851'
+REQUEST_METHOD = 'GET'
+SCRIPT_NAME = ''
+SERVER_NAME = '0.0.0.0'
+SERVER_PORT = '46940'
+SERVER_PROTOCOL = 'HTTP/1.1'
+SERVER_SOFTWARE = 'gunicorn/20.0.4'
+gunicorn.socket = <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.17.247.254', 46940), raddr=('10.52.12.58', 29851)>
+wsgi.errors = <gunicorn.http.wsgi.WSGIErrorsWrapper object at 0x7f50394e2610>
+wsgi.file_wrapper = ''
+wsgi.input = <gunicorn.http.body.Body object at 0x7f5039292490>
+wsgi.input_terminated = True
+wsgi.multiprocess = True
+wsgi.multithread = False
+wsgi.run_once = False
+wsgi.url_scheme = 'https'
+wsgi.version = '(1, 0)'
+
+Settings:
+Using settings module dish.settings
+ABSOLUTE_URL_OVERRIDES = {}
+ACCOUNT_EMAIL_VERIFICATION = 'optional'
+ACCOUNT_SIGNUP_FORM_CLASS = 'dish.files.forms.SignupAllauthForm'
+ACCOUNT_USER_MODEL_USERNAME_FIELD = 'username'
+ADMINS = "(('Claudio', 'itisclaudio@gmail.com'),)"
+ADMIN_MEDIA_PREFIX = 'http://url7152.worldfood.guide/ls/click?upn=-2BwMYNzVb1qaevM0hP3HehXVIR19VQ3Mr2ZBLrzbDP1IL9mg97YSxnUjb9ayqUbB5-2BGTE6SRXc8dYe7KO13Iqxg-3D-3DXxzU_62Gbf4HiGw3ADYiMJvHFW1Ms1eFhf-2BPAKF3vox91H7a71VOK6RQiHJ8gdQejYM-2B8Cx0rpVqjHxWulfLkAo65E5TH1Ru9mpm1Mh-2Fle-2BRwS7fRaVWikXcJqt4xLzU4jZdmvFIizV7jFPUdxoxAounqiSI1zcyZXxf1YAfL948nUoDmEoNRSmeSXvPjTwkhxFRZIRo9xqFQxjCbS2XnKUI5HQ-3D-3D
+ALLOWED_HOSTS = ['wfg22s.herokuapp.com', 'wfg22p.herokuapp.com', 'wfg.herokuapp.com/', 'wfg22s.s3.amazonaws.com', 'www.worldfood.guide', 'worldfood.guide']
+APPEND_SLASH = True
+AUTHENTICATION_BACKENDS = "('django.contrib.auth.backends.ModelBackend', 'allauth.account.auth_backends.AuthenticationBackend')"
+AUTH_PASSWORD_VALIDATORS = '********************'
+AUTH_USER_MODEL = 'auth.User'
+AWS_ACCESS_KEY_ID = '********************'
+AWS_DEFAULT_ACL = None
+AWS_QUERYSTRING_AUTH = False
+AWS_S3_FILE_OVERWRITE = False
+AWS_S3_REGION_NAME = 'us-east-1'
+AWS_SECRET_ACCESS_KEY = '********************'
+AWS_STORAGE_BUCKET_NAME = 'wfg22p'
+BASE_DIR = '/app'
+BASE_URL = 'http://url7152.worldfood.guide/ls/click?upn=-2BwMYNzVb1qaevM0hP3HehTw6PoR84x-2FHR442q6lZYAEzdxqVmkKO1qvaxAl6U8Nlekvy_62Gbf4HiGw3ADYiMJvHFW1Ms1eFhf-2BPAKF3vox91H7a71VOK6RQiHJ8gdQejYM-2B8lTXJ-2BNzKO5VS-2FRBJpcoo5R6XHWnMAOZV7yZfy28Eu2V-2F3kY1zHsoB7WoWNrMM0rOn8gzUKX-2BqQv-2FbExfXmZm-2FgdPZHHbJz1ZfRJ53bsWOjFzqg9Y2QZcXEM-2FTWeGIf1wzrnkbmxiJtRRZAxg6bNcDg-3D-3D
+CACHES = {'default': {'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache', 'LOCATION': '127.0.0.1:11211'}}
+CACHE_MIDDLEWARE_ALIAS = 'default'
+CACHE_MIDDLEWARE_KEY_PREFIX = '********************'
+CACHE_MIDDLEWARE_SECONDS = 600
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
+CSRF_COOKIE_AGE = 31449600
+CSRF_COOKIE_DOMAIN = None
+CSRF_COOKIE_HTTPONLY = False
+CSRF_COOKIE_NAME = 'csrftoken'
+CSRF_COOKIE_PATH = '/'
+CSRF_COOKIE_SAMESITE = 'Lax'
+CSRF_COOKIE_SECURE = False
+CSRF_FAILURE_VIEW = 'django.views.csrf.csrf_failure'
+CSRF_HEADER_NAME = 'HTTP_X_CSRFTOKEN'
+CSRF_TRUSTED_ORIGINS = []
+CSRF_USE_SESSIONS = False
+DATABASES = {'default': {'NAME': 'dbji7ldjm79ag', 'USER': 'avphawvaaujvsj', 'PASSWORD': '********************', 'HOST': 'ec2-3-211-48-92.compute-1.amazonaws.com', 'PORT': 5432, 'CONN_MAX_AGE': 500, 'ENGINE': 'django.db.backends.postgresql_psycopg2', 'ATOMIC_REQUESTS': False, 'AUTOCOMMIT': True, 'OPTIONS': {}, 'TIME_ZONE': None, 'TEST': {'CHARSET': None, 'COLLATION': None, 'NAME': None, 'MIRROR': None}}}
+DATABASE_ROUTERS = []
+DATA_UPLOAD_MAX_MEMORY_SIZE = 2621440
+DATA_UPLOAD_MAX_NUMBER_FIELDS = 1000
+DATETIME_FORMAT = 'N j, Y, P'
+DATETIME_INPUT_FORMATS = ['%Y-%m-%d %H:%M:%S', '%Y-%m-%d %H:%M:%S.%f', '%Y-%m-%d %H:%M', '%Y-%m-%d', '%m/%d/%Y %H:%M:%S', '%m/%d/%Y %H:%M:%S.%f', '%m/%d/%Y %H:%M', '%m/%d/%Y', '%m/%d/%y %H:%M:%S', '%m/%d/%y %H:%M:%S.%f', '%m/%d/%y %H:%M', '%m/%d/%y']
+DATE_FORMAT = 'N j, Y'
+DATE_INPUT_FORMATS = ['%Y-%m-%d', '%m/%d/%Y', '%m/%d/%y', '%b %d %Y', '%b %d, %Y', '%d %b %Y', '%d %b, %Y', '%B %d %Y', '%B %d, %Y', '%d %B %Y', '%d %B, %Y']
+DEBUG = False
+DEBUG_PROPAGATE_EXCEPTIONS = False
+DECIMAL_SEPARATOR = '.'
+DEFAULT_CHARSET = 'utf-8'
+DEFAULT_CONTENT_TYPE = 'text/html'
+DEFAULT_EXCEPTION_REPORTER_FILTER = 'django.views.debug.SafeExceptionReporterFilter'
+DEFAULT_FILE_STORAGE = 'custom_storages.MediaRootS3BotoStorage'
+DEFAULT_FROM_EMAIL = 'support@worldfoodguide.com'
+DEFAULT_INDEX_TABLESPACE = ''
+DEFAULT_TABLESPACE = ''
+DISALLOWED_USER_AGENTS = []
+EMAIL_BACKEND = 'sgbackend.SendGridBackend'
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_PASSWORD = '********************'
+EMAIL_HOST_USER = 'app166507653@heroku.com'
+EMAIL_PORT = 587
+EMAIL_SSL_CERTFILE = None
+EMAIL_SSL_KEYFILE = '********************'
+EMAIL_SUBJECT_PREFIX = '[Django] '
+EMAIL_TIMEOUT = None
+EMAIL_USE_LOCALTIME = False
+EMAIL_USE_SSL = False
+EMAIL_USE_TLS = True
+FILE_CHARSET = 'utf-8'
+FILE_UPLOAD_DIRECTORY_PERMISSIONS = None
+FILE_UPLOAD_HANDLERS = ['django.core.files.uploadhandler.MemoryFileUploadHandler', 'django.core.files.uploadhandler.TemporaryFileUploadHandler']
+FILE_UPLOAD_MAX_MEMORY_SIZE = 2621440
+FILE_UPLOAD_PERMISSIONS = None
+FILE_UPLOAD_TEMP_DIR = None
+FIRST_DAY_OF_WEEK = 0
+FIXTURE_DIRS = []
+FORCE_SCRIPT_NAME = None
+FORMAT_MODULE_PATH = None
+FORM_RENDERER = 'django.forms.renderers.DjangoTemplates'
+IGNORABLE_404_URLS = []
+INSTALLED_APPS = ['django.contrib.sites', 'allauth', 'allauth.account', 'allauth.socialaccount', 'allauth.socialaccount.providers.facebook', 'django.contrib.admin', 'django.contrib.auth', 'django.contrib.contenttypes', 'django.contrib.sessions', 'django.contrib.messages', 'django.contrib.staticfiles', 'django.contrib.postgres', 'django.contrib.humanize', 'dish.files', 'crispy_forms', 'django_user_agents', 'django.contrib.sitemaps', 'inflection', 'rest_framework', 'storages']
+INTERNAL_IPS = []
+LANGUAGES = [('af', 'Afrikaans'), ('ar', 'Arabic'), ('ast', 'Asturian'), ('az', 'Azerbaijani'), ('bg', 'Bulgarian'), ('be', 'Belarusian'), ('bn', 'Bengali'), ('br', 'Breton'), ('bs', 'Bosnian'), ('ca', 'Catalan'), ('cs', 'Czech'), ('cy', 'Welsh'), ('da', 'Danish'), ('de', 'German'), ('dsb', 'Lower Sorbian'), ('el', 'Greek'), ('en', 'English'), ('en-au', 'Australian English'), ('en-gb', 'British English'), ('eo', 'Esperanto'), ('es', 'Spanish'), ('es-ar', 'Argentinian Spanish'), ('es-co', 'Colombian Spanish'), ('es-mx', 'Mexican Spanish'), ('es-ni', 'Nicaraguan Spanish'), ('es-ve', 'Venezuelan Spanish'), ('et', 'Estonian'), ('eu', 'Basque'), ('fa', 'Persian'), ('fi', 'Finnish'), ('fr', 'French'), ('fy', 'Frisian'), ('ga', 'Irish'), ('gd', 'Scottish Gaelic'), ('gl', 'Galician'), ('he', 'Hebrew'), ('hi', 'Hindi'), ('hr', 'Croatian'), ('hsb', 'Upper Sorbian'), ('hu', 'Hungarian'), ('hy', 'Armenian'), ('ia', 'Interlingua'), ('id', 'Indonesian'), ('io', 'Ido'), ('is', 'Icelandic'), ('it', 'Italian'), ('ja', 'Japanese'), ('ka', 'Georgian'), ('kab', 'Kabyle'), ('kk', 'Kazakh'), ('km', 'Khmer'), ('kn', 'Kannada'), ('ko', 'Korean'), ('lb', 'Luxembourgish'), ('lt', 'Lithuanian'), ('lv', 'Latvian'), ('mk', 'Macedonian'), ('ml', 'Malayalam'), ('mn', 'Mongolian'), ('mr', 'Marathi'), ('my', 'Burmese'), ('nb', 'Norwegian Bokmål'), ('ne', 'Nepali'), ('nl', 'Dutch'), ('nn', 'Norwegian Nynorsk'), ('os', 'Ossetic'), ('pa', 'Punjabi'), ('pl', 'Polish'), ('pt', 'Portuguese'), ('pt-br', 'Brazilian Portuguese'), ('ro', 'Romanian'), ('ru', 'Russian'), ('sk', 'Slovak'), ('sl', 'Slovenian'), ('sq', 'Albanian'), ('sr', 'Serbian'), ('sr-latn', 'Serbian Latin'), ('sv', 'Swedish'), ('sw', 'Swahili'), ('ta', 'Tamil'), ('te', 'Telugu'), ('th', 'Thai'), ('tr', 'Turkish'), ('tt', 'Tatar'), ('udm', 'Udmurt'), ('uk', 'Ukrainian'), ('ur', 'Urdu'), ('vi', 'Vietnamese'), ('zh-hans', 'Simplified Chinese'), ('zh-hant', 'Traditional Chinese')]
+LANGUAGES_BIDI = ['he', 'ar', 'fa', 'ur']
+LANGUAGE_CODE = 'en-us'
+LANGUAGE_COOKIE_AGE = None
+LANGUAGE_COOKIE_DOMAIN = None
+LANGUAGE_COOKIE_NAME = 'django_language'
+LANGUAGE_COOKIE_PATH = '/'
+LOADING_IMG = 'loading512.gif'
+LOCALE_PATHS = []
+LOCAL_DEV = False
+LOGGING = {}
+LOGGING_CONFIG = 'logging.config.dictConfig'
+LOGIN_REDIRECT_URL = '/myprofile/'
+LOGIN_URL = '/accounts/login/'
+LOGOUT_REDIRECT_URL = None
+MANAGERS = []
+MEDIAFILES_LOCATION = 'media'
+MEDIA_ROOT = 'http://url7152.worldfood.guide/ls/click?upn=-2BwMYNzVb1qaevM0hP3HehXVIR19VQ3Mr2ZBLrzbDP1IbsEcDLe8nlqJneHW1wWkEozTlme71UniHFGhT-2FvICCA-3D-3DmS4C_62Gbf4HiGw3ADYiMJvHFW1Ms1eFhf-2BPAKF3vox91H7a71VOK6RQiHJ8gdQejYM-2B8Q5jE0DO4acLXUZGLGajTQBSQl5xjbJRJoNz79vqvahRNbuyq7Ix-2FEz6j07ckNx77pmosdxc-2FjLQhGCWNvPi95X5lggGVkbn5EyvMrUQpejWBI6k9s1xGn-2FJworDl9vLgxNoNRnWIZhVsS-2BNLS8lA9g-3D-3D
+MEDIA_URL = 'http://url7152.worldfood.guide/ls/click?upn=-2BwMYNzVb1qaevM0hP3HehXVIR19VQ3Mr2ZBLrzbDP1KKpzGXlM-2F2Kux2ATZ2JTZuM498hvEjHAIhG-2FIEm-2BvVuQ-3D-3DhnGY_62Gbf4HiGw3ADYiMJvHFW1Ms1eFhf-2BPAKF3vox91H7a71VOK6RQiHJ8gdQejYM-2B8w2iuLfE2Cxbf2y3IO8qBd8nKPcXZq9UMij5Wsw6-2BY-2B3e4fdXsP1rH9DdkzbR-2BxFCCJVBJjjQziEKAWFXGMJSoL0TOSYkFLJPGvjY4nWUxYzFIVY-2Fzq0BOrCuuHctjVhpXZHJXuoUXHoEvCwBW0UoaQ-3D-3D
+MESSAGE_STORAGE = 'django.contrib.messages.storage.fallback.FallbackStorage'
+MIDDLEWARE = ['django.middleware.security.SecurityMiddleware', 'django.contrib.sessions.middleware.SessionMiddleware', 'django.middleware.common.BrokenLinkEmailsMiddleware', 'django.middleware.common.CommonMiddleware', 'django.middleware.csrf.CsrfViewMiddleware', 'django.contrib.auth.middleware.AuthenticationMiddleware', 'django.contrib.messages.middleware.MessageMiddleware', 'django.middleware.clickjacking.XFrameOptionsMiddleware', 'django_user_agents.middleware.UserAgentMiddleware']
+MIGRATION_MODULES = {}
+MONTH_DAY_FORMAT = 'F j'
+NUMBER_GROUPING = 0
+PASSWORD_HASHERS = '********************'
+PASSWORD_RESET_TIMEOUT_DAYS = '********************'
+PREPEND_WWW = False
+REST_FRAMEWORK = {'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination', 'PAGE_SIZE': 20}
+ROOT_URLCONF = 'dish.urls'
+S3_URL = 'http://url7152.worldfood.guide/ls/click?upn=-2BwMYNzVb1qaevM0hP3HehXVIR19VQ3Mr2ZBLrzbDP1LDXSQqVlCQZGPg9uzGwOzbj6YO_62Gbf4HiGw3ADYiMJvHFW1Ms1eFhf-2BPAKF3vox91H7a71VOK6RQiHJ8gdQejYM-2B8ydbHjt3ljngojBAHgJWK6J9c9i6yhQGX86QMexsGt5gHoZ2TuEqyhsjsUfFeMWuQ2btsm2Tw3B2S3-2FfVets97CJmq-2F7F0Oq-2F6dlxKMemoNC3otEh3Q03J9rdRShYcGPgp0Z11iS-2BZY6oONC4sFWebA-3D-3D
+SECRET_KEY = '********************'
+SECURE_BROWSER_XSS_FILTER = False
+SECURE_CONTENT_TYPE_NOSNIFF = False
+SECURE_HSTS_INCLUDE_SUBDOMAINS = False
+SECURE_HSTS_PRELOAD = False
+SECURE_HSTS_SECONDS = 0
+SECURE_PROXY_SSL_HEADER = "('HTTP_X_FORWARDED_PROTO', 'https')"
+SECURE_REDIRECT_EXEMPT = []
+SECURE_SSL_HOST = None
+SECURE_SSL_REDIRECT = True
+SENDGRID_API_KEY = '********************'
+SERVER_EMAIL = 'root@localhost'
+SESSION_CACHE_ALIAS = 'default'
+SESSION_COOKIE_AGE = 1209600
+SESSION_COOKIE_DOMAIN = None
+SESSION_COOKIE_HTTPONLY = True
+SESSION_COOKIE_NAME = 'sessionid'
+SESSION_COOKIE_PATH = '/'
+SESSION_COOKIE_SAMESITE = 'Lax'
+SESSION_COOKIE_SECURE = False
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+SESSION_FILE_PATH = None
+SESSION_SAVE_EVERY_REQUEST = False
+SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
+SETTINGS_MODULE = 'dish.settings'
+SHORT_DATETIME_FORMAT = 'm/d/Y P'
+SHORT_DATE_FORMAT = 'm/d/Y'
+SIGNING_BACKEND = 'django.core.signing.TimestampSigner'
+SILENCED_SYSTEM_CHECKS = []
+SITE_ID = 1
+SOCIALACCOUNT_AUTO_SIGNUP = False
+SOCIALACCOUNT_EMAIL_REQUIRED = True
+SOCIALACCOUNT_PROVIDERS = {'facebook': {'METHOD': 'oauth2', 'SCOPE': ['email', 'public_profile'], 'AUTH_PARAMS': {'access_type': 'online'}, 'FIELDS': ['id', 'email', 'name', 'first_name', 'last_name', 'verified', 'locale', 'timezone', 'link', 'gender', 'updated_time'], 'EXCHANGE_TOKEN': '********************', 'LOCALE_FUNC': <function <lambda> at 0x7f50459f25e0>, 'VERIFIED_EMAIL': False, 'VERSION': 'v2.4'}}
+STATICFILES_DIRS = "('/app/dish/static',)"
+STATICFILES_FINDERS = ['django.contrib.staticfiles.finders.FileSystemFinder', 'django.contrib.staticfiles.finders.AppDirectoriesFinder']
+STATICFILES_STORAGE = 'custom_storages.StaticRootS3BotoStorage'
+STATIC_ROOT = None
+STATIC_URL = 'http://url7152.worldfood.guide/ls/click?upn=-2BwMYNzVb1qaevM0hP3HehXVIR19VQ3Mr2ZBLrzbDP1IL9mg97YSxnUjb9ayqUbB5Mmban23J4iES9J3BGmWILg-3D-3Dshw__62Gbf4HiGw3ADYiMJvHFW1Ms1eFhf-2BPAKF3vox91H7a71VOK6RQiHJ8gdQejYM-2B8yY9akT3LLurk6w-2BfjPDEbZyZBBULGlL-2Bfw66LXpYmRYfPCJOMPNsR-2B7-2F22NiDgo5eYGqdRadx5nAjSmatMAhTfMNy32bQJHruOL-2Fz8kQ2Ea1OsrMQ6Kak8-2F8lW9FjGUfBAfDDvKXCId-2BnRwQw5tb2A-3D-3D
+TEMPLATES = [{'BACKEND': 'django.template.backends.django.DjangoTemplates', 'DIRS': ['/app/dish/templates/'], 'APP_DIRS': True, 'OPTIONS': {'context_processors': ['django.template.context_processors.debug', 'django.template.context_processors.request', 'django.template.context_processors.media', 'django.contrib.auth.context_processors.auth', 'django.contrib.messages.context_processors.messages', 'dish.files.context_processors.global_constants']}}]
+TEST_NON_SERIALIZED_APPS = []
+TEST_RUNNER = 'django.test.runner.DiscoverRunner'
+THOUSAND_SEPARATOR = ','
+TIME_FORMAT = 'P'
+TIME_INPUT_FORMATS = ['%H:%M:%S', '%H:%M:%S.%f', '%H:%M']
+TIME_ZONE = 'America/Chicago'
+UPLOAD_DISH = 'dish/media/dishes'
+UPLOAD_USER = 'dish/media/users'
+USER_AGENTS_CACHE = 'default'
+USE_I18N = True
+USE_L10N = False
+USE_THOUSAND_SEPARATOR = False
+USE_TZ = False
+USE_X_FORWARDED_HOST = False
+USE_X_FORWARDED_PORT = False
+WSGI_APPLICATION = 'dish.wsgi.application'
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+YEAR_MONTH_FORMAT = 'F Y'
